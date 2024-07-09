@@ -1,0 +1,256 @@
+*{
+         margin: 0;
+         padding: 0;
+         box-sizing: border-box;
+}
+.loader{
+         display: flex;
+         align-items: center;
+         justify-content: space-evenly;
+         margin-top: 100px;
+        
+}
+
+.loader1{
+         border: 5px solid rgb(207, 239, 239);
+         height: 50px;
+         width: 50px;
+         margin: 20px auto; 
+         border-top: 5px solid #000;
+         border-radius: 50%;
+         border-bottom: 5px solid #500070e9;
+         /* border-left: 5px solid rgb(244, 151, 151); */
+         /* border-right: 5px solid rgb(156, 251, 104); */
+animation: spin1 1s  infinite ease-in-out ;
+}
+@keyframes spin1 {
+        0%{
+         transform: rotate(0deg);
+        } 
+        100%{
+         transform: rotate(360deg);
+        }
+}
+
+.loader2{
+         height: 50px;
+         width: 50px;
+         background-color: rgb(6, 10, 34);
+         margin: 20px auto;
+         border-radius: 50%;
+         border: 6px solid rgb(235, 171, 54);
+         border-top: 6px solid rgb(15, 14, 17);
+         border-bottom: 6px solid rgb(7, 5, 22);
+         animation:pulse 1s ease-in-out infinite ;
+}
+
+@keyframes pulse {
+         0%{
+                transform: scale(.6) rotate(180deg);
+                opacity: .5;
+                background-color: rgb(132, 228, 68);
+
+         }
+         50%{
+                  transform: scale(1) rotate(270deg);
+                  opacity: 1;
+                  background-color: rgb(26, 20, 20);
+         }
+         100%{
+                  transform: scale(.7) rotate(360deg);
+                  opacity:.6;
+                  background-color: rgb(167, 73, 6);
+
+         }
+         
+}
+
+       
+       .heart {
+         margin: 70px auto;
+         width: 100px;
+         height: 100px;
+         background-color: red;
+         transform: rotate(45deg);
+         animation:heart_pulse 1s linear  infinite;
+       }
+       
+       .heart::before{
+         content: "";
+         height: 100%;
+         width: 100%;
+         background-color:red;
+         position: absolute;
+         top: -50px;
+         left: 0;
+         border-radius: 50%;
+         
+       }
+       .heart::after{
+         content: "";
+         height: 100px;
+         width: 100px;
+         background-color:red;
+         position: absolute;
+         left: -50px;
+         top: 0;
+         border-radius: 50%;
+       }
+
+       @keyframes heart_pulse {
+         0%{
+                  transform: scale(1) rotate(45deg);
+                  opacity: .4;
+                 
+         }
+         50%{
+                  transform: scale(.5) rotate(45deg);
+                  opacity: 1;
+                 
+
+         }
+         100%{
+                  transform: scale(.8) rotate(45deg);
+                  opacity: .4;
+                  
+
+         }
+       }
+
+       /* bounce1 */
+.bounce{
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         gap: 10px;
+         margin: 10px 10px;
+}
+       .bounce1{
+         height: 15px;
+         width: 15px;
+         background-color: darkblue;
+border-radius: 50%;
+animation: bouncer 1s linear  infinite;
+}
+
+
+
+@keyframes bouncer {
+0%{
+         transform: translateY(0);
+
+}  
+50%{
+         transform: translateY(-15px);
+}  
+100%{
+         transform: translateY(15px);
+}
+}
+
+.bounce div:nth-child(2){
+         animation-delay: .4s;
+         }
+         .bounce div:nth-child(3){
+         animation-delay: .7s;}
+       
+       
+
+
+
+
+         .wave{
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  gap: 10px;
+                 height: 100px;
+         }
+                .wave1{
+                  height: 25px;
+                  width: 10px;
+                  background-color: darkblue;
+         border-radius: 20px;
+         animation: wave 1s linear  infinite;
+         }
+         
+         
+         
+         @keyframes wave {
+         0%{
+                  height: 50px;
+         
+         }  
+         50%{
+                  height: 30px;
+         }  
+         100%{
+                  height: 50px;
+         }
+         }
+         
+         .wave div:nth-child(2){
+                  animation-delay: .4s;
+                  }
+                  .bounce div:nth-child(3){
+                  animation-delay: .7s;}
+       
+       .boxes{
+         padding-top: 15px;
+         border:2px solid black;
+         height: 200px;
+         width: 200px;
+         background-color: #a3d6f6;
+       }
+
+       /* infit losder */
+      
+    
+       
+    
+    .loader3 {
+      margin: 100px auto;
+        position: relative;
+        width: 100px;
+        height: 60px;
+    }
+    
+    .circle {
+        width: 60px;
+        height: 80px;
+        border: 5px solid #3498db;
+        border-radius: 50%;
+        position: absolute;
+        top: 0;
+    }
+    
+    .circle:nth-child(1) {
+        left: 0;
+        animation: leftCircle 2s infinite ease-in-out;
+    }
+    
+    .circle:nth-child(2) {
+        right: 0;
+        animation: rightCircle 2s infinite ease-in-out;
+    }
+    
+    @keyframes leftCircle {
+        0%, 100% {
+            transform: translateX(0) rotate(0);
+        }
+        50% {
+            transform: translateX(60px) rotate(360deg);
+        }
+    }
+    
+    @keyframes rightCircle {
+        0%, 100% {
+            transform: translateX(0) rotate(0);
+        }
+        50% {
+            transform: translateX(-60px) rotate(-360deg);
+        }
+    }
+    
+    
+    
